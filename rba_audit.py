@@ -1,23 +1,4 @@
-"""
-rba_audit.py  -  audit of the RBA login dataset (memory-safe, uses DuckDB).
 
-What it does
-  1. Reads the raw CSV, converts it ONCE to a typed Parquet file (fast to query afterwards).
-  2. Runs the audit checks and writes every result table as a CSV into the report folder.
-  3. Writes audit_summary.md with the key numbers and simple warning flags.
-
-Usage (from the project folder, with the virtual environment active):
-    python rba_audit.py --csv data/raw/rba-dataset.csv --out reports/audit
-    python rba_audit.py --csv data/raw/mock_rba.csv --out reports/audit_mock       # rehearsal on fake data
-
-Useful options:
-    --memory-limit 6GB   cap DuckDB memory (default 70% of RAM)
-    --threads 4          limit CPU threads
-    --rebuild            ignore an existing Parquet file and convert again
-    --check-duplicates   also count fully duplicated rows (slow on the full dataset)
-
-Everything the script prints and saves is a count or a rate. Nothing is modified in the raw file.
-"""
 import argparse
 import re
 import sys
