@@ -1,15 +1,4 @@
-"""
-make_mock_rba.py  -  creates a FAKE login file with the same columns as the RBA dataset.
 
-Purpose: let you rehearse the audit steps on a small file (a few seconds) BEFORE you
-download and process the real 30+ million row dataset.
-
-WARNING: every value here is random. Results from this file mean NOTHING about the real data.
-
-Usage:
-    python make_mock_rba.py --out data/raw/mock_rba.csv --rows 300000
-    python make_mock_rba.py --out data/raw/mock_rba_epoch.csv --rows 300000 --epoch   # integer timestamps
-"""
 import argparse
 import numpy as np
 import pandas as pd
