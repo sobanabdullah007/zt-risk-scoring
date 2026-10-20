@@ -1,0 +1,17 @@
+# Data files (too large)
+data/
+*.csv
+*.parquet
+
+# Temporary files
+duckdb_tmp/
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+venv/
+
+# System files
+.DS_Store
+Thumbs.db
